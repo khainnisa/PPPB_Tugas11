@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:itemCount="6"
+        tools:listitem="@layout/item_user" />
+
+    <!-- Navbar -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/customBottomNavCard"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/grey"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Icon Home -->
+            <ImageView
+                android:id="@+id/iconHome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/home"
+                android:contentDescription="Home Icon"
+                android:padding="8dp"
+                android:scaleType="centerInside" />
+
+            <!-- Icon List -->
+            <ImageView
+                android:id="@+id/iconList"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/person"
+                android:contentDescription="List Icon"
+                android:padding="8dp"
+                android:scaleType="centerInside" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
